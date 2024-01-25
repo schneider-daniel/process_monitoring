@@ -2,6 +2,8 @@
 
 This Python script monitors and records various performance metrics of a specified process using the `psutil` library. The collected metrics include CPU usage, memory percentages, RSS (Resident Set Size), and VIRT (Virtual Memory Size). The script runs for a specified duration with a given sampling frequency and outputs the data to a CSV file.
 
+![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=008080)
+![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=008080)
 ## Usage
 
 1. **Clone the Repository:**
