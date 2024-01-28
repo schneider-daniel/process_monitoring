@@ -58,11 +58,13 @@ def record_process_metrics(pid, duration_seconds, sample_frequency_hz, output_fi
 
     rows = []  # List to store rows
 
+    process = psutil.Process(pid)
+
     for _ in range(total_samples):
         sample_start_time = time()
 
-        process = psutil.Process(pid)
-        cpu_percent = process.cpu_percent(interval=target_freq)  # No interval for instantaneous measurement
+        #process = psutil.Process(pid)
+        cpu_percent = process.cpu_percent(interval=0.1)  # No interval for instantaneous measurement
         mem_info = process.memory_info()
         rss = mem_info.rss / (1024 ** 2)  # Convert RSS to megabytes
         virt = mem_info.vms / (1024 ** 2)  # Convert VIRT to megabytes
